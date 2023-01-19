@@ -81,7 +81,7 @@ export default function Home() {
         <HeaderComp />
         <h2 className={styles.heading}>Where do you want to travel?</h2>
         <div className={styles.location}>
-          <div>
+          <div style={{paddingBottom: "2em"}}>
             <input 
               value={location}
               onChange={event => setLocation(event.target.value)}
@@ -94,7 +94,37 @@ export default function Home() {
           {errorMessage}
         </div>
 
-        {show ? 
+          
+              <div className={styles.countryInfo}>
+                <div>{data.name}</div> 
+                <div>{country}</div>
+              </div>
+              <div className={styles.weatherInfo}>
+                {
+                  weather && weather.map((w, index) => {
+                    return(
+                      <>
+                      <div className={styles.mainWeather}>
+                        <div><img src = {`http://openweathermap.org/img/wn/${w.icon}@2x.png` }/></div>
+                        <div key={index}>
+                          <div>{w.description}</div>
+                          <div>{w.main}</div>
+                        </div>
+                      </div>
+                      </>
+                    )
+                  })
+                }
+                <div style={{fontSize: "300%"}}>{temp}℃</div>
+              </div>
+              
+                <div>Feels like: {feel} ℃</div>
+                <div>Wind speed: {gust} m/s</div>
+            
+         
+
+        {/* Original */}
+        {/* {show ? 
           <>
             <div className={styles.cont}>
               <div className={styles.nameBox}>
@@ -118,7 +148,10 @@ export default function Home() {
               </div>
             </div>
           </> : null
-        }
+        } */}
+
+
+
 
         <div style={{paddingTop: "10em"}}>Recent Search Locations</div>
         <div className={styles.outer}>
