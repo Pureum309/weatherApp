@@ -23,7 +23,7 @@ export default function Home() {
 
   const [change, setChange] = useState("");
 
-  var apiKey ="21e57e200a6ec4b637ee66fc219a2a62";
+  var apiKey =process.env.NEXT_PUBLIC_apiKey;
   var lang = "kr";
   var units = "metric";
 
