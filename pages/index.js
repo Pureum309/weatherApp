@@ -5,8 +5,6 @@ import styles from '@/styles/Home.module.css'
 import { use, useState } from 'react'
 import axios from 'axios'
 
-import HeaderComp from '@/components/header'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -83,13 +81,14 @@ export default function Home() {
           <img className={styles.headerImg} src="./forecast.png"/>
           <h1>Travel Weather App</h1>
         </div>
+
         <h2 className={styles.heading}>Where do you want to travel?</h2>
         <div className={styles.location}>
           <div style={{paddingBottom: "2em"}}>
             <input 
               value={location}
               onChange={event => setLocation(event.target.value)}
-              placeholder="Search for location"
+              placeholder="Search for location and Press Enter"
               onKeyDown={searchLocation}
               type="text"
               className={styles.input}
@@ -164,8 +163,8 @@ export default function Home() {
             </div>
           </> : null
         } */}
-
-        <div style={{paddingTop: "3em"}}>Recent Search Locations</div>
+        <div style={{borderBottom: "5px double #1C5A90", width: "90%", marginTop: "10%"}}/>
+        <div className={styles.search}>Recent Search Locations</div>
         <div className={styles.outer}>
             {recentSearch.length != 0 ?
               <>
