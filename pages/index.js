@@ -78,7 +78,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main} style={{backgroundImage: `url("/${change}.jpeg")`, backgroundSize: "cover", }}>
-        <HeaderComp />
+        {/* <HeaderComp /> */}
+        <div className={styles.header}>
+          <img className={styles.headerImg} src="./forecast.png"/>
+          <h1>Travel Weather App</h1>
+        </div>
         <h2 className={styles.heading}>Where do you want to travel?</h2>
         <div className={styles.location}>
           <div style={{paddingBottom: "2em"}}>
@@ -134,8 +138,6 @@ export default function Home() {
           </> : null
         }
             
-         
-
         {/* Original */}
         {/* {show ? 
           <>
@@ -163,9 +165,6 @@ export default function Home() {
           </> : null
         } */}
 
-
-
-
         <div style={{paddingTop: "3em"}}>Recent Search Locations</div>
         <div className={styles.outer}>
             {recentSearch.length != 0 ?
@@ -182,10 +181,13 @@ export default function Home() {
                           {
                             item.weather && item.weather.map((w, index) => {
                               return(
-                                <div key={index}>
-                                  <div>{w.description}</div>
-                                  <div>{w.main}</div>
-                                </div>
+                                <div className={styles.mainWeather1}>
+                                  <div><img src = {`http://openweathermap.org/img/wn/${w.icon}@2x.png` }/></div>
+                                  <div key={index}>
+                                    <div>{w.description}</div>
+                                    <div>{w.main}</div>
+                                  </div>
+                              </div>
                               )
                             })
                           }

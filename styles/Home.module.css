@@ -79,6 +79,22 @@
 }
 
 /*New Style*/
+.header {
+  width: 100%;
+  height: 50%;
+  background-color: skyblue;
+
+  display: flex;
+  align-items: center;
+}
+
+.headerImg {
+  width: 14%;
+  height: auto;
+  margin: 1em;
+  border-radius: 1em;
+}
+
 .mainInfo {
   display: flex;
   flex-direction: column;
@@ -116,6 +132,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+.mainWeather1 {
+  display: flex;
+  /* justify-content: center; */
   align-items: center;
 }
 
