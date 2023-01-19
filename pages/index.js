@@ -94,9 +94,10 @@ export default function Home() {
           {errorMessage}
         </div>
 
-          
+        {show ? <>
+            <div className={styles.mainInfo}>
               <div className={styles.countryInfo}>
-                <div>{data.name}</div> 
+                <div style={{fontSize: "150%"}}>{data.name}</div> 
                 <div>{country}</div>
               </div>
               <div className={styles.weatherInfo}>
@@ -117,9 +118,21 @@ export default function Home() {
                 }
                 <div style={{fontSize: "300%"}}>{temp}℃</div>
               </div>
-              
-                <div>Feels like: {feel} ℃</div>
-                <div>Wind speed: {gust} m/s</div>
+              <div className={styles.restCont}>
+                <div className={styles.restInfo}>
+                  <img src = "/thermo.png" className={styles.imgIcon}/>
+                  <div>Feels like: </div>
+                  <div>{feel} ℃</div>
+                </div>
+                <div className={styles.restInfo}>
+                  <img src = "/windicon.png" className={styles.imgIcon}/>
+                  <div>Wind speed: </div>
+                  <div>{gust} m/s</div>
+                </div>
+              </div>
+            </div>
+          </> : null
+        }
             
          
 
@@ -153,7 +166,7 @@ export default function Home() {
 
 
 
-        <div style={{paddingTop: "10em"}}>Recent Search Locations</div>
+        <div style={{paddingTop: "3em"}}>Recent Search Locations</div>
         <div className={styles.outer}>
             {recentSearch.length != 0 ?
               <>

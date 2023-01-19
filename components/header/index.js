@@ -9,7 +9,8 @@ const Cont = styled.div`
     align-items: center;
 `
 const Logo = styled.img`
-    width: 4em;
+    width: 15%;
+    height: auto;
     margin: 1em;
     border-radius: 1em;
 `

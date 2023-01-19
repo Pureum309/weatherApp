@@ -79,6 +79,12 @@
 }
 
 /*New Style*/
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .countryInfo {
   display: flex;
   flex-direction: column;
@@ -111,4 +117,30 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.restCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5%;
+  
+  width: 50%;
+  border-radius: 1em;
+
+  background-color: white;
+
+  margin-top: 1em;
+}
+.restInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imgIcon {
+  width: 30%;
+  height: auto;
 }
