@@ -119,17 +119,17 @@ export default function Home() {
                     )
                   })
                 }
-                <div style={{fontSize: "300%"}}>{temp}℃</div>
+                <div style={{fontSize: "300%"}}>{temp}&#8451;</div>
               </div>
               <div className={styles.restCont}>
                 <div className={styles.restInfo}>
                   <img src = "/thermo.png" className={styles.imgIcon}/>
-                  <div>Feels like: </div>
-                  <div>{feel} ℃</div>
+                  <div>Feels like </div>
+                  <div>{feel}&#8451;</div>
                 </div>
                 <div className={styles.restInfo}>
                   <img src = "/windicon.png" className={styles.imgIcon}/>
-                  <div>Wind speed: </div>
+                  <div>Wind speed </div>
                   <div>{gust} m/s</div>
                 </div>
               </div>
@@ -190,8 +190,8 @@ export default function Home() {
                               )
                             })
                           }
-                          <div style={{paddingTop: "1em"}}>Temperature: {item.main.temp} ℃</div>
-                          <div>Feels like: {item.main.feels_like} ℃</div>
+                          <div style={{paddingTop: "1em"}}>Temperature: {item.main.temp}&#8451;</div>
+                          <div>Feels like: {item.main.feels_like}&#8451;</div>
                           <div>Wind gust: {item.wind.gust} m/s</div>
                         </div>
                       </div>
